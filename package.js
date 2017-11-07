@@ -19,7 +19,7 @@ Npm.depends(npmModules);
 
 Package.on_use(function(api) {
   configurePackage(api);
-  api.export(['Kadira']);
+  api.export(['Kadira', 'HiveCallbacks']);
 });
 
 Package.on_test(function(api) {
@@ -99,6 +99,7 @@ function configurePackage(api) {
 
   // common before
   api.add_files([
+    'lib/hiveCallbacks.js',
     'lib/common/unify.js',
     'lib/models/base_error.js'
   ], ['client', 'server']);
